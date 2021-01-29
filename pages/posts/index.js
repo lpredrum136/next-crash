@@ -1,22 +1,11 @@
 import Layout from '../../components/layouts/Layout'
 import Card from 'react-bootstrap/Card'
+import { getPosts } from '../../lib/post'
 
-const posts = [
-  {
-    id: 1,
-    title: 'Post 1',
-    body: 'My Post 1 body'
-  },
-  {
-    id: 2,
-    title: 'Post 2',
-    body: 'My Post 2 body'
-  }
-]
-const Posts = () => (
+const Posts = ({ posts }) => (
   <Layout>
     {posts.map(post => (
-      <Card key={post.id}>
+      <Card key={post.id} className='my-3 shadow'>
         <Card.Body>
           <Card.Title>{post.title}</Card.Title>
           <Card.Text>{post.body}</Card.Text>
@@ -25,5 +14,14 @@ const Posts = () => (
     ))}
   </Layout>
 )
+
+export const getStaticProps = async () => {
+  const posts = await getPosts()
+  return {
+    props: {
+      posts
+    }
+  }
+}
 
 export default Posts
