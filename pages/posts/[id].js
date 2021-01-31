@@ -29,6 +29,7 @@ export const getStaticPaths = async () => {
   }
 }
 
+// argument here is context { params: ...}
 export const getStaticProps = async ({ params }) => {
   const post = await getPostById(params.id)
   return {

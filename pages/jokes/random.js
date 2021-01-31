@@ -1,4 +1,3 @@
-import React from 'react'
 import { getRandomJoke } from '../../lib/joke'
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
