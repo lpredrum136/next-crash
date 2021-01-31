@@ -10,6 +10,9 @@ const NavbarMenu = () => (
         {/* Because the children is a wrapper for HTML a tag */}
         <Nav.Link>Posts</Nav.Link>
       </Link>
+      <Link href='/jokes/random' passHref>
+        <Nav.Link>Joke</Nav.Link>
+      </Link>
       <Link href='/about' passHref>
         <Nav.Link>About</Nav.Link>
       </Link>
