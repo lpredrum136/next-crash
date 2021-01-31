@@ -3,5 +3,10 @@ npm install react-bootstrap bootstrap
 
 Incremental Static Regeneration
 
-SPinner co the dung style de custom css module
+Spinner co the dung style de custom css module
         style={{ width: '10rem', height: '10rem' }}
+
+        basically:
+        - static rendering: ahead of user request, non-sensitive user info (so it can be publicly cached), static data, SEO
+        - ssr: page different for each request, user specific info, data that often changes, SEO
+        - client side data fetching: don't need to prerender the data

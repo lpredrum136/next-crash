@@ -22,6 +22,22 @@ const Random = ({ joke }) => {
 
 export const getServerSideProps = async () => {
   const joke = await getRandomJoke()
+  // let joke = await getRandomJoke()
+  // joke = false
+
+  if (!joke)
+    return {
+      notFound: true // allow the page to return a 404 status and page
+    }
+
+  // or redirect user to other route
+  // return {
+  //   redirect: {
+  //     destination: '/posts',
+  //     permanent: false
+  //   }
+  // }
+
   return {
     props: {
       joke
