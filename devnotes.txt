@@ -1,0 +1,7 @@
+npx create-next-app
+npm install react-bootstrap bootstrap
+
+Incremental Static Regeneration
+
+SPinner co the dung style de custom css module
+        style={{ width: '10rem', height: '10rem' }}
