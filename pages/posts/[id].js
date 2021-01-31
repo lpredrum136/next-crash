@@ -21,7 +21,7 @@ const Post = ({ post }) => {
 }
 
 export const getStaticPaths = async () => {
-  const paths = await getPostIds()
+  const paths = await getPostIds(5)
   // console.log(paths)
   return {
     paths,
