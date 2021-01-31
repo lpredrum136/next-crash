@@ -3,6 +3,7 @@ import { getPostById, getPostIds } from '../../lib/post'
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
 import Spinner from 'react-bootstrap/Spinner'
+import spinnerStyles from '../../styles/Spinner.module.css'
 
 import Link from 'next/link'
 import { useRouter } from 'next/router'
@@ -16,7 +17,12 @@ const Post = ({ post }) => {
   // When finished, Next adds this page to list of prerendered page (kinda cache) for any subsequent requests
   if (router.isFallback) {
     return (
-      <Spinner animation='border' role='status' variant='dark'>
+      <Spinner
+        animation='border'
+        role='status'
+        variant='dark'
+        className={spinnerStyles.spinnerLg}
+      >
         <span className='sr-only'>Loading...</span>
       </Spinner>
     )
